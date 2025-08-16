@@ -1,0 +1,106 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@700&display=swap');
+
+    h1 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 4rem;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b, #ff6a00, #ffd500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeDown 2s ease-in-out, glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(255, 65, 108, 0.6); }
+      to { text-shadow: 0 0 20px rgba(255, 200, 0, 0.9); }
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #00c6ff, #0072ff);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      animation: fadeDown 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 15px 0;
+      animation: fadeUp 2s ease-in-out;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      color: white;
+      background: #ff416c;
+      background: linear-gradient(to right, #ff4b2b, #ff416c);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 65, 108, 0.6);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Floating bubbles */
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      animation: rise 15s infinite ease-in;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
